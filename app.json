@@ -6,6 +6,8 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#ffffff",
+    "fontFamily": "Poppins",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
