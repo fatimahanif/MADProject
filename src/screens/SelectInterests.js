@@ -65,7 +65,7 @@ const Register = ({ navigation }) => {
                     )}
                 </View>
 
-                <Pressable style={styles.button} android_ripple={{ color: "#d4a28c" }}>
+                <Pressable style={styles.button} android_ripple={{ color: "#d4a28c" }} onPress={()=>{navigation.navigate('HomeScreen')}}>
                     <Text style={styles.button_text}>Continue</Text>
                 </Pressable>
             </View>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         textAlign: "left",
     },
     body: {
-        flex: 3,
+        flex: 2,
         backgroundColor: "#fff",
         borderTopLeftRadius: 26,
         borderTopRightRadius: 26,

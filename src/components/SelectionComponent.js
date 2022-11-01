@@ -8,7 +8,7 @@ import {
 
 const Selection = (props) => {
     const [pressed, setPressed] = useState(props.selected);
-    console.log(props.selected + " , " + pressed)
+    // console.log(props.selected + " , " + pressed)
     return (
             // <View style={ ({pressed}) => {return pressed ? {...styles.topic, backgroundColor: "#D97D54"}: {...styles.topic, ...props.style}}}>
             <View style={ {...styles.topic, ...props.style} } >

@@ -29,7 +29,7 @@ const Register = ({navigation}) => {
                     
                     {/* <Text style={styles.forgot}>Forgot Password?</Text> */}
 
-                    <Pressable style={styles.button} android_ripple={{color: "#d4a28c"}} onPress={()=>{navigation.navigate('SelectInterests')}}>
+                    <Pressable style={styles.button} android_ripple={{color: "#d4a28c"}} onPress={()=>{navigation.navigate('VerificationCode')}}>
                         <Text style={styles.button_text}>Register</Text>
                     </Pressable>
 

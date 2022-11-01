@@ -8,33 +8,23 @@ import {
     Pressable,
 } from "react-native";
 
-const AuthScreen = ({navigation}) => {
+const VerificationCode = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.head}>
-                <Text style={styles.head_text}>Welcome Back!</Text>
+                <Text style={styles.head_text}>Verify Account</Text>
             </View>
 
             <View style={styles.form}>
                 <>
-                    <TextInput style={styles.input} placeholder="Username" />
-                    <TextInput style={styles.input} placeholder="Password" />
+                    <TextInput style={styles.input} placeholder="Verification Code" />
                 </>
                 
-                <Text style={styles.forgot}>Forgot Password?</Text>
+                <Text style={styles.resend}>Resend Code</Text>
 
-                <Pressable style={styles.button} android_ripple={{color: "#d4a28c"}} onPress={()=>{navigation.navigate('HomeScreen')}}>
-                    <Text style={styles.button_text}>Login</Text>
+                <Pressable style={styles.button} android_ripple={{color: "#d4a28c"}} onPress={()=>{navigation.navigate('SelectInterests')}}>
+                    <Text style={styles.button_text}>Verify</Text>
                 </Pressable>
-
-                <View style={styles.signup}>
-                    <Text style={styles.signup_text} >Create an account?</Text>
-                    <Pressable onPress={()=>{navigation.navigate('Register')}}>
-                        <Text style={{...styles.signup_text, ...styles.signup_link}} >Signup</Text>
-                    </Pressable>
-                </View>
-
-                {/* <Text> dhjsgcshcgshgc s</Text> */}
 
             </View>
             
@@ -67,7 +57,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderTopLeftRadius: 26,
         borderTopRightRadius: 26,
-        paddingTop: 30,
+        paddingTop: 50,
         paddingHorizontal: 20,
         // justifyContent: "center",
     },
@@ -94,29 +84,13 @@ const styles = StyleSheet.create({
         fontFamily: "Poppins",
         textAlign: "center",
     },
-    forgot:{
+    resend:{
         fontSize: 12,
         color: '#484848',
         fontFamily: "Poppins",
         textAlign: "right",
         marginVertical: 5,
     },
-    signup:{
-        display: 'flex',
-        flexDirection: "row",
-        alignSelf: "center",
-        marginTop: 15,
-    },
-    signup_text:{
-        marginLeft: 5,
-        fontFamily: "Poppins",
-        fontSize: 15,
-    },
-    signup_link:{
-        fontWeight: '600',
-        color: '#D97D54',
-        textDecorationLine: "underline",
-    },
 });
 
-export default AuthScreen;
+export default VerificationCode;
