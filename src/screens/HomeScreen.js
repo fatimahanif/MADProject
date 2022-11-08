@@ -1,83 +1,59 @@
 import React, { useState } from "react";
 import {
-    StyleSheet,
-    View,
-    Text,
-    TextInput,
-    Button,
-    Pressable,
-    ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  TextInput,
+  Button,
+  Pressable,
+  ScrollView,
 } from "react-native";
 import Footer from "../components/FooterTabs";
+import data from "../../assets/data/data.json";
+
+// console.log(data);
+const news_json = JSON.parse(JSON.stringify(data));
+let news = [];
+for (var i in news_json) 
+  news.push(news_json[i]);
+console.log(news[0][0])
 
 const Home = ({ navigation }) => {
-
-    return (
-        <View style={styles.container}>
-            <Text>Home Page</Text>
-            <Footer/>
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <ScrollView style={styles.scroll_style}>
+        <Text style={styles.latest_head}>Latest News</Text>
+      </ScrollView>
+      <Footer style={styles.footer} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        // backgroundColor: "#D97D54",
-        // alignItems: 'center',
-        justifyContent: "center",
-        // padding: 10,
-    },
-    head: {
-        flex: 1,
-        backgroundColor: "#D97D54",
-        justifyContent: "center",
-        padding: 20,
-    },
-    head_text: {
-        color: "#fff",
-        fontSize: 30,
-        fontFamily: "Poppins",
-        textAlign: "left",
-    },
-    body: {
-        flex: 2,
-        backgroundColor: "#fff",
-        borderTopLeftRadius: 26,
-        borderTopRightRadius: 26,
-        paddingTop: 30,
-        paddingHorizontal: 20,
-        // alignSelf: "center",
-    },
-    topics_container:{
-        marginVertical: 20,
-        justifyContent: "center",
-        flexDirection: "row",
-        flexWrap: "wrap",
-    },
-    topic: {
-        padding: 13,
-        borderWidth: 2,
-        margin: 5,
-        borderColor: '#D97D54',
-        borderRadius: 100,
-        textAlign: "center",
-    },
-    button: {
-        backgroundColor: "#D97D54",
-        padding: 8,
-        marginTop: 10,
-        elevation: 3,
-        width: "100%",
-        alignSelf: "center",
-        borderRadius: 5,
-    },
-    button_text: {
-        color: "#fff",
-        fontSize: 16,
-        fontFamily: "Poppins",
-        textAlign: "center",
-    },
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    // backgroundColor: "#D97D54",
+    // alignItems: 'center',
+    // justifyContent: "center",
+    // padding: 10,
+    // width: "100%"
+  },
+  latest_head: {
+    fontFamily: "Poppins",
+    color: "#D97D54",
+    // fontWeight: "bold",
+    fontSize: 20,
+  },
+  footer: {
+    // alignSelf: "flex-end",
+    // justifyContent: "flex-end",
+    // alignItems: "baseline",
+  },
+  scroll_style: {
+    paddingHorizontal: 12,
+    paddingVertical: 15,
+  },
 });
 
 export default Home;
