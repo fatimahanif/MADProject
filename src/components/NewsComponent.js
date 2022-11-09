@@ -15,7 +15,7 @@ const BigNews = (props) => {
       <Text style={styles.text}>{props.headline}</Text>
 
       <View style={styles.options_row}>
-        <Text style={styles.authenticity}>Authenticity: {props.authenticity}</Text>
+        <Text style={styles.authenticity}>Authenticity: {props.authenticity}%</Text>
 
         <View style={styles.options_icons}>
           <Feather name="heart" size={16} color="#D97D54" />
@@ -45,7 +45,7 @@ const SmallNews = (props) => {
         <Text style={styles.text}>{props.headline}</Text>
 
         <View style={styles.options_row}>
-          <Text style={styles.authenticity}>Authenticity: {props.authenticity}</Text>
+          <Text style={styles.authenticity}>Authenticity: {props.authenticity}%</Text>
 
           <View style={styles.options_icons_small}>
             <Feather name="heart" size={16} color="#D97D54" />

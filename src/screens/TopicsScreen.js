@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from "react-native";
 import Footer from "../components/FooterTabs";
-import {BigNews, SmallNews} from "../components/NewsComponent";
+import TopicsTabs from "../components/TopicsTabs";
 
 import data from "../../assets/data/data.json";
 
@@ -17,36 +17,26 @@ import data from "../../assets/data/data.json";
 //reading data from json file
 const news_json = JSON.parse(JSON.stringify(data));
 let news = [];
-for (var i in news_json) 
-  news.push(news_json[i]);
-news = news[0]
+for (var i in news_json) news.push(news_json[i]);
+news = news[0];
 
 //filtering to get the news to be displeyd in small component
-let news_small = news.filter((item, index)=>index>0);
+let news_small = news.filter((item, index) => index > 0);
 // console.log(news_small.length)
 
 // console.log(news)
 
-const Home = ({ navigation }) => {
+const Topics = () => {
   return (
     <View style={styles.container}>
-      <Button title="topics" onPress={() => {navigation.navigate("TopicsScreen");}}/>
-      <ScrollView style={styles.scroll_style}>
-        <Text style={styles.latest_head}>Latest News</Text>
 
-        {/* displaying the main news */}
-        <BigNews news_source={news[0].news_source} time={news[0].time} authenticity={news[0].authenticity} headline={news[0].headline} image={news[0].main_image}/>
+      <TopicsTabs/>
 
-        {/* displaying other news */}
-        {news_small.map((item, index)=>
-          <View>
-            <SmallNews news_source={news_small[index].news_source} time={news_small[index].time} authenticity={news_small[index].authenticity} headline={news_small[index].headline} image={news_small[index].main_image} />
-          </View>
-        )
-      }
-
+      <ScrollView>
       </ScrollView>
+
       <Footer style={styles.footer} />
+      
     </View>
   );
 };
@@ -78,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Topics;

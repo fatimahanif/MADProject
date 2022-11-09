@@ -5,6 +5,7 @@ import Register from './src/screens/Register';
 import SelectInterests from './src/screens/SelectInterests';
 import VerificationCode from './src/screens/VerificationCode';
 import HomeScreen from './src/screens/HomeScreen';
+import TopicsScreen from './src/screens/TopicsScreen';
 import {useFonts} from 'expo-font';
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +32,9 @@ export default function App() {
         }}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen} options={{
           title: "Home"
+        }}/>
+        <Stack.Screen name='TopicsScreen' component={TopicsScreen} options={{
+          title: "Topics"
         }}/>
       </Stack.Navigator>
     </NavigationContainer>
