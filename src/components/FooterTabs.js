@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
     // borderColor: '#D97D54',
     // borderRadius: 100,
     // alignSelf: "flex-end",
-    justifyContent: "space-evenly",
+    // justifyContent: "space-evenly",
+    justifyContent: "space-around",
     backgroundColor: "#fff",
     borderTopWidth: 1,
     borderTopColor: "#cfc9ba"
