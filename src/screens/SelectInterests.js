@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from "react-native";
 import Selection from "../components/SelectionComponent";
+import FooterComponent from '../components/FooterComponent';
 
 const Register = ({ navigation }) => {
   // let topics = [
@@ -74,7 +75,7 @@ const Register = ({ navigation }) => {
           style={styles.button}
           android_ripple={{ color: "#d4a28c" }}
           onPress={() => {
-            navigation.navigate("HomeScreen");
+            navigation.navigate("FooterComponent");
           }}
         >
           <Text style={styles.button_text}>Continue</Text>

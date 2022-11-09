@@ -35,7 +35,7 @@ const Topics = () => {
       <ScrollView>
       </ScrollView>
 
-      <Footer style={styles.footer} />
+      {/* <Footer style={styles.footer} /> */}
       
     </View>
   );

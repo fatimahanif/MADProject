@@ -59,7 +59,7 @@ const TopicsTabs = (props) => {
       <TabView value={index} onChange={setIndex}>
 
         {/* Latest */}
-        <TabView.Item>
+        <TabView.Item style={{paddingHorizontal: 12}}>
           {/* {latest.map((item, index)=>
             <View>
               <SmallNews news_source={latest[index].news_source} time={latest[index].time} authenticity={latest[index].authenticity} headline={latest[index].headline} image={latest[index].main_image} />

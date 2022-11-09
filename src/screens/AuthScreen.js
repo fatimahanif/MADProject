@@ -7,6 +7,7 @@ import {
   Button,
   Pressable,
 } from "react-native";
+import FooterComponent from '../components/FooterComponent';
 
 const AuthScreen = ({ navigation }) => {
   return (
@@ -27,7 +28,7 @@ const AuthScreen = ({ navigation }) => {
           style={styles.button}
           android_ripple={{ color: "#d4a28c" }}
           onPress={() => {
-            navigation.navigate("HomeScreen");
+            navigation.navigate("FooterComponent");
           }}
         >
           <Text style={styles.button_text}>Login</Text>

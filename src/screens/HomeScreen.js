@@ -30,23 +30,25 @@ let news_small = news.filter((item, index)=>index>0);
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Button title="topics" onPress={() => {navigation.navigate("TopicsScreen");}}/>
+
+      {/* <Button title="topics" onPress={() => {navigation.navigate("FooterComponent");}}/> */}
+
       <ScrollView style={styles.scroll_style}>
         <Text style={styles.latest_head}>Latest News</Text>
 
         {/* displaying the main news */}
-        <BigNews news_source={news[0].news_source} time={news[0].time} authenticity={news[0].authenticity} headline={news[0].headline} image={news[0].main_image}/>
+        <BigNews news_source={news[0].news_source} time={news[0].time} authenticity={news[0].authenticity} headline={news[0].headline} image={news[0].main_image} url={news[0].url}/>
 
         {/* displaying other news */}
         {news_small.map((item, index)=>
-          <View>
-            <SmallNews news_source={news_small[index].news_source} time={news_small[index].time} authenticity={news_small[index].authenticity} headline={news_small[index].headline} image={news_small[index].main_image} />
+          <View key={index}>
+            <SmallNews news_source={news_small[index].news_source} time={news_small[index].time} authenticity={news_small[index].authenticity} headline={news_small[index].headline} image={news_small[index].main_image} url={news_small[index].url} />
           </View>
         )
       }
-
       </ScrollView>
-      <Footer style={styles.footer} />
+      {/* <Footer style={styles.footer} /> */}
+      
     </View>
   );
 };

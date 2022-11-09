@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, Pressable, View, Image } from "react-native";
+import { StyleSheet, Text, Pressable, View, Image, Linking } from "react-native";
 import { Entypo, AntDesign, Feather, Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 
 const BigNews = (props) => {
   return (
-    <View style={{ ...styles.container, ...props.style }}>
+    <Pressable style={{ ...styles.container, ...props.style }}  onPress={()=>{Linking.openURL(props.url)}} >
       <Image style={styles.image} source={{uri: props.image}}  />
       
       <View style={styles.options_row}>
@@ -26,14 +26,14 @@ const BigNews = (props) => {
       </View>
 
       {/* <Text style={styles.news_body}>ISLAMABAD: In order to avert the bloodshed and looming collision between the marchers...</Text> */}
-    </View>
+    </Pressable>
   );
 };
 
 
 const SmallNews = (props) => {
   return(
-    <View style={{ ...styles.smallNews, ...props.style }}>
+    <Pressable style={{ ...styles.smallNews, ...props.style }} onPress={()=>{Linking.openURL(props.url)}} >
       <Image style={styles.imageSmall} source={{uri: props.image}}  />
       
       <View style={styles.small_news_body}>
@@ -57,7 +57,7 @@ const SmallNews = (props) => {
       </View>
       
 
-    </View>
+    </Pressable>
   );
 };
 
