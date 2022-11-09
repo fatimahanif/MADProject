@@ -9,6 +9,8 @@ import {
   ScrollView,
 } from "react-native";
 import Footer from "../components/FooterTabs";
+import BigNews from "../components/NewsComponent";
+
 import data from "../../assets/data/data.json";
 
 // console.log(data);
@@ -16,13 +18,15 @@ const news_json = JSON.parse(JSON.stringify(data));
 let news = [];
 for (var i in news_json) 
   news.push(news_json[i]);
-console.log(news[0][0])
+// console.log(news[0][0])
 
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scroll_style}>
         <Text style={styles.latest_head}>Latest News</Text>
+        <BigNews />
+
       </ScrollView>
       <Footer style={styles.footer} />
     </View>
