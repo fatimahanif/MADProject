@@ -2,20 +2,34 @@ import * as React from "react";
 import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "../screens/HomeScreen";
-// import TopicsScreen from "../screens/TopicsScreen";
-import TopicsComponent from "./TopicsComponent";
 import { Ionicons, Entypo } from '@expo/vector-icons';
 
-function Home() {
+import HomeScreen from "../screens/HomeScreen";
+import CameraScreen from "../screens/CameraScreen";
+import TopicsComponent from "./TopicsComponent";
+import ImagePickerComponet from "./ImagePickerComponent";
+
+const Home = () => {
   return (
     <HomeScreen/>
   );
 }
 
-function Topics() {
+const Topics = () => {
   return (
     <TopicsComponent/>
+  );
+}
+
+const Camera = () => {
+  return (
+    <CameraScreen/>
+  )
+}
+
+const ImageToText = () => {
+  return( 
+    <ImagePickerComponet onSubmit={console.log} /> 
   );
 }
 
@@ -38,6 +52,9 @@ export default function App() {
         else if (route.name === 'Library') {
           return <Ionicons name="library" size={22} color={color} />
         }
+        else if (route.name === ' ') {
+          return <Ionicons name="camera" size={24} color={color} />
+        }
       },
       tabBarActiveTintColor: '#D97D54',
       tabBarInactiveTintColor: 'gray',
@@ -46,7 +63,8 @@ export default function App() {
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Topics" component={Topics} />
-      <Tab.Screen name="Newsroom" component={Home} />
+      <Tab.Screen name=" " component={Camera} />
+      <Tab.Screen name="Newsroom" component={ImageToText} />
       <Tab.Screen name="Library" component={Home} />
 
     </Tab.Navigator>

@@ -6,6 +6,7 @@ import SelectInterests from './src/screens/SelectInterests';
 import VerificationCode from './src/screens/VerificationCode';
 import HomeScreen from './src/screens/HomeScreen';
 import TopicsScreen from './src/screens/TopicsScreen';
+import CameraScreen from './src/screens/CameraScreen';
 import FooterComponent from './src/components/FooterComponent';
 import {useFonts} from 'expo-font';
 
@@ -38,6 +39,9 @@ export default function App() {
           title: "Topics"
         }}/>
         <Stack.Screen name='FooterComponent' component={FooterComponent} options={{
+          headerShown: false
+        }}/>
+        <Stack.Screen name='CameraScreen' component={CameraScreen} options={{
           headerShown: false
         }}/>
       </Stack.Navigator>
