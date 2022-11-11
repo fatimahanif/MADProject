@@ -5,9 +5,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons, Entypo } from '@expo/vector-icons';
 
 import HomeScreen from "../screens/HomeScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 import CameraScreen from "../screens/CameraScreen";
 import TopicsComponent from "./TopicsComponent";
-import ImagePickerComponet from "./ImagePickerComponent";
+import ImagePickerComponent from "./ImagePickerComponent";
 
 const Home = () => {
   return (
@@ -29,13 +30,19 @@ const Camera = () => {
 
 const ImageToText = () => {
   return( 
-    <ImagePickerComponet onSubmit={console.log} /> 
+    <ImagePickerComponent onSubmit={console.log} /> 
   );
+}
+
+const Profile= () => {
+  return (
+    <ProfileScreen name='Fatima Hanif' username='fatima123' email='fatimahanif303@gmail.com' phone='+92-318-5152910' />
+  )
 }
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default function App({navigation}) {
   return (
     <Tab.Navigator
     screenOptions={({ route }) => ({
@@ -64,7 +71,8 @@ export default function App() {
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Topics" component={Topics} />
       <Tab.Screen name=" " component={Camera} />
-      <Tab.Screen name="Newsroom" component={ImageToText} />
+      <Tab.Screen name="Newsroom" component={Profile} />
+      {/* <Tab.Screen name="Newsroom" component={ImageToText} /> */}
       <Tab.Screen name="Library" component={Home} />
 
     </Tab.Navigator>

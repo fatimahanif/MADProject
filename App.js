@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AuthScreen from './src/screens/AuthScreen';
@@ -7,6 +8,7 @@ import VerificationCode from './src/screens/VerificationCode';
 import HomeScreen from './src/screens/HomeScreen';
 import TopicsScreen from './src/screens/TopicsScreen';
 import CameraScreen from './src/screens/CameraScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 import FooterComponent from './src/components/FooterComponent';
 import {useFonts} from 'expo-font';
 
@@ -44,6 +46,7 @@ export default function App() {
         <Stack.Screen name='CameraScreen' component={CameraScreen} options={{
           headerShown: false
         }}/>
+        <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
