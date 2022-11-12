@@ -3,7 +3,6 @@ import { ScrollView, Text, View, StyleSheet } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 import { BigNews, SmallNews } from "../components/NewsComponent";
-import HomeScreen from "../screens/HomeScreen";
 import data from "../../assets/data/data.json";
 
 const news_json = JSON.parse(JSON.stringify(data));

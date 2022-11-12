@@ -34,16 +34,7 @@ export default function App() {
         <Stack.Screen name='VerificationCode' component={VerificationCode} options={{
           headerShown: false,
         }}/>
-        <Stack.Screen name='HomeScreen' component={HomeScreen} options={{
-          title: "Home"
-        }}/>
-        <Stack.Screen name='TopicsScreen' component={TopicsScreen} options={{
-          title: "Topics"
-        }}/>
         <Stack.Screen name='FooterComponent' component={FooterComponent} options={{
-          headerShown: false
-        }}/>
-        <Stack.Screen name='CameraScreen' component={CameraScreen} options={{
           headerShown: false
         }}/>
         <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>

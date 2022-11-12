@@ -41,8 +41,8 @@ const ProfileScreen: React.FunctionComponent<OverlayComponentProps> = (
             />
             {/* name and username */}
             <View style={styles.namesRow}>
-              <Text style={styles.name}>{props.name}</Text>
-              <Text style={styles.username}>{props.username}</Text>
+              <Text style={styles.name}>{props.name}Fatima Hanif</Text>
+              <Text style={styles.username}>{props.username}fatima123</Text>
             </View>
           </View>
 
@@ -59,25 +59,25 @@ const ProfileScreen: React.FunctionComponent<OverlayComponentProps> = (
                 autoComplete="off"
                 style={styles.input}
                 placeholder="Name"
-                value={props.name}
+                value='Fatima Hanif'
               />
               <TextInput
                 autoComplete="off"
                 style={styles.input}
                 placeholder="Username"
-                value={props.username}
+                value='fatima123'
               />
               <TextInput
                 autoComplete="off"
                 style={styles.input}
                 placeholder="Email ID"
-                value={props.email}
+                value='fatimahanif303@gmail.com'
               />
               <TextInput
                 autoComplete="off"
                 style={styles.input}
                 placeholder="Phone Number"
-                value={props.phone}
+                value='+92-318-5152910'
               />
               <TextInput
                 autoComplete="off"
@@ -106,12 +106,12 @@ const ProfileScreen: React.FunctionComponent<OverlayComponentProps> = (
         <View style={styles.contactInfo}>
           <View style={styles.contactRow}>
             <Feather name="mail" size={24} color="#D97D54" />
-            <Text style={styles.contactText}>{props.email}</Text>
+            <Text style={styles.contactText}>{props.email}fatimahanif303@gmail.com</Text>
           </View>
 
           <View style={styles.contactRow}>
             <Feather name="phone" size={24} color="#D97D54" />
-            <Text style={styles.contactText}>{props.phone}</Text>
+            <Text style={styles.contactText}>{props.phone}+92-318-5152910</Text>
           </View>
         </View>
       </>
