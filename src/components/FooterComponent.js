@@ -7,6 +7,7 @@ import { Ionicons, Entypo } from '@expo/vector-icons';
 import HomeScreen from "../screens/HomeScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import CameraScreen from "../screens/CameraScreen";
+import LibraryScreen from "../screens/LibraryScreen";
 import TopicsComponent from "./TopicsComponent";
 import ImagePickerComponent from "./ImagePickerComponent";
 
@@ -37,6 +38,12 @@ const ImageToText = () => {
 const Profile= () => {
   return (
     <ProfileScreen name='Fatima Hanif' username='fatima123' email='fatimahanif303@gmail.com' phone='+92-318-5152910' />
+  )
+}
+
+const Library = () => {
+  return(
+    <LibraryScreen/>
   )
 }
 
@@ -73,7 +80,7 @@ export default function App({navigation}) {
       <Tab.Screen name=" " component={Camera} />
       <Tab.Screen name="Newsroom" component={Profile} />
       {/* <Tab.Screen name="Newsroom" component={ImageToText} /> */}
-      <Tab.Screen name="Library" component={Home} />
+      <Tab.Screen name="Library" component={Library} />
 
     </Tab.Navigator>
   );
